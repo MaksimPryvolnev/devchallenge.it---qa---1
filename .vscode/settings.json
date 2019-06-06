@@ -1,0 +1,35 @@
+// settings file for Cucumber (Gherkin) Full Support extension
+{
+    "cucumberautocomplete.steps": [
+        "test/steps/*.js"
+    ],
+    "cucumberautocomplete.syncfeatures": "test/features/*feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumberautocomplete.stepsInvariants": true,
+    "cucumberautocomplete.customParameters": [
+        {
+            "parameter": "{ab}",
+            "value": "(a|b)"
+        },
+        {
+            "parameter": "{a.*}",
+            "value": "a"
+        },
+    ],
+    "cucumberautocomplete.pages": {
+        "pages": "test/pageobjects/*"
+    },
+    "cucumberautocomplete.skipDocStringsFormat": true,
+    "cucumberautocomplete.formatConfOverride": {
+        "And": 3,
+        "But": "relative",
+    },
+    "cucumberautocomplete.onTypeFormat": true,
+    "editor.quickSuggestions": {
+        "comments": false,
+        "strings": true,
+        "other": true
+    },
+    "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then)\\("
+}

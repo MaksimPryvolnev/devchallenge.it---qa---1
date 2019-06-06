@@ -1,0 +1,37 @@
+{
+    "name": "cucumbertests",
+    "version": "1.0.0",
+    "scripts": {
+        "wdio": "./node_modules/.bin/wdio",
+        "allure": "node_modules/.bin/allure",
+        "test:local": "npm run wdio test/config/wdio.local.conf.js",
+        "allure-report": "allure generate ./test/reports/allure-results -c && allure open"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {},
+    "dependencies": {
+        "assert": "^1.4.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "~1.7.0",
+        "babel-register": "~6.26.0",
+        "chai": "~4.1.2",
+        "chai-as-promised": "^7.1.1",
+        "fs": "0.0.1-security",
+        "npm": "^6.9.0",
+        "@wdio/cli": "^5.4.8",
+        "@wdio/dot-reporter": "^5.4.15",
+        "wdio-allure-reporter": "^0.6.0",
+        "wdio-cucumber-framework": "~2.2.0",
+        "wdio-dot-reporter": "0.0.8",
+        "wdio-phantomjs-service": "~0.2.2",
+        "wdio-selenium-standalone-service": "~0.0.9",
+        "wdio-spec-reporter": "~0.1.2",
+        "wdio-visual-regression-service": "^0.9.0",
+        "wdio-multiple-cucumber-html-reporter": "^0.3.3",
+        "allure-commandline": "^1.4.22-1",
+        "webdriverio": "4.13.2",
+        "xmultiple": "^1.0.0",
+        "dotenv": "^6.2.0"
+    }
+}
