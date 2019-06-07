@@ -3,6 +3,46 @@ services:
   wildfly:
     build: ./app
     container_name: "wildfly"
+    privileged: true
     ports:
       - "8080:8080"
       - "9990:9990"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/article/faces/welcome.xhtml"]
+      interval: 30s
+      timeout: 30s
+      retries: 5
+  selenium-hub:
+    image: selenium/hub:3.141.59-palladium
+    container_name: selenium-hub
+    expose:
+      - "4444"
+  chrome:
+    image: selenium/node-chrome:3.141.59-palladium
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+  firefox:
+    image: selenium/node-firefox:3.141.59-palladium
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+  app:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: >
+      sh -c "npm run test:docker"
+    links:
+      - selenium-hub
+      

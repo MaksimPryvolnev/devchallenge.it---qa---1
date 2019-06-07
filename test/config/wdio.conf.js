@@ -102,15 +102,15 @@ exports.config = {
     // WebdriverRTC: https://github.com/webdriverio/webdriverrtc
     // Browserevent: https://github.com/webdriverio/browserevent
     // plugins: {
-        // 'wdio-screenshot': {}
-        //     webdrivercss: {
-        //         screenshotRoot: 'my-shots',
-        //         failedComparisonsRoot: 'diffs',
-        //         misMatchTolerance: 0.05,
-        //         screenWidth: [320,480,640,1024]
-        //     },
-        //     webdriverrtc: {},
-        //     browserevent: {}
+    // 'wdio-screenshot': {}
+    //     webdrivercss: {
+    //         screenshotRoot: 'my-shots',
+    //         failedComparisonsRoot: 'diffs',
+    //         misMatchTolerance: 0.05,
+    //         screenWidth: [320,480,640,1024]
+    //     },
+    //     webdriverrtc: {},
+    //     browserevent: {}
     // },
     //
     // Test runner services
@@ -130,7 +130,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['dot', 'spec', 'multiple-cucumber-html'],
+    reporters: ['dot', 'spec'],
     //
     reporterOptions: {
         json: {

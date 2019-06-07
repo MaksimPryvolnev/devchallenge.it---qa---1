@@ -5,6 +5,7 @@
         "wdio": "./node_modules/.bin/wdio",
         "allure": "node_modules/.bin/allure",
         "test:local": "npm run wdio test/config/wdio.local.conf.js",
+        "test:docker": "npm run wdio test/config/wdio.docker.conf.js",
         "allure-report": "allure generate ./test/reports/allure-results -c && allure open"
     },
     "author": "",
