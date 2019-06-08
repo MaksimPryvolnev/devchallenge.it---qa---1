@@ -10,12 +10,12 @@ Given(/^User is on the ([^"]*) page$/, function (page) {
     switch (page) {
         case "welcome":
             this.setPage(page);
-            WelcomePage.open('');
+            WelcomePage.open('/article/faces/welcome.xhtml');
             WelcomePage.waitForPageToLoad();
             break;
         case "register new hotel":
             this.setPage(page);
-            browser.url('http://localhost:8080/article/faces/hotel.xhtml');
+            RegisterNewHotelPage.open('/article/faces/hotel.xhtml');
             RegisterNewHotelPage.waitForPageToLoad();
             break;
         default:

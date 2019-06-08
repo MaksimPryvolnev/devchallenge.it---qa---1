@@ -50,7 +50,7 @@ exports.config = {
         // make sure that not more than 5 instance gets started at a time.
         maxInstances: 5,
         browserName: 'chrome',
-        // version: '72.0',
+        version: '74.0',
         enableVNC: true,
         enableVideo: false,
         javascriptEnabled: true,
@@ -82,7 +82,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url
     // parameter starts with "/", then the base url gets prepended.
-    baseUrl: 'http://localhost:8080/article/faces/welcome.xhtml',
+    baseUrl: 'http://127.0.0.1:8080/article/faces/welcome.xhtml',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 60000,

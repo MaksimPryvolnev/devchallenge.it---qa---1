@@ -10,7 +10,9 @@
     },
     "author": "",
     "license": "ISC",
-    "devDependencies": {},
+    "devDependencies": {
+        "wdio-docker-service": "^2.1.0"
+    },
     "dependencies": {
         "assert": "^1.4.1",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
